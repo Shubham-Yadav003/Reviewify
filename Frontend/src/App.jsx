@@ -9,7 +9,7 @@ import axios from 'axios'
 import './App.css'
 
 function App() {
-  const apiUrl = process.env.REACT_APP_API_URL || "https://reviewify-rzm7.onrender.com/";
+  const apiUrl = process.env.REACT_APP_API_URL1 || process.env.REACT_APP_API_URL2;
   const [ count, setCount ] = useState(0)
   const [ code, setCode ] = useState(` function sum() {
   return 1 + 1
