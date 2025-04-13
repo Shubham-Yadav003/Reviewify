@@ -1,10 +1,17 @@
 const express = require('express');
 const aiRoutes = require('./routes/ai.routes')
 const cors = require('cors')
+require('dotenv').config();
 
 const app = express()
 
-app.use(cors())
+const corsOptions = {
+    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+   
+  };
+  
+  app.use(cors(corsOptions));
 
 
 // Middleware
